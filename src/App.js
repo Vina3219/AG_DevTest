@@ -5,11 +5,11 @@ import { selectTotalProductsCount, loadPage } from "./slice";
 import ProductsCountPerPageSelect from "./components/productsCountPerPageSelect/ProductsCountPerPageSelect";
 import Pagination from "./components/pagination/Pagination";
 import React, { useEffect } from "react";
-import ProductsList from "./components/productsList/ProuctsList";
+import ProductsList from "./components/productsList/ProductsList";
 
 const App = () => {
   const dispatch = useDispatch();
-  const totalProuductCount = useSelector(selectTotalProductsCount);
+  const totalProductCount = useSelector(selectTotalProductsCount);
 
   useEffect(() => {
     dispatch(loadPage());
@@ -20,7 +20,7 @@ const App = () => {
       <header className="app-header">
         <div className="app-header__title">
           <h2>All Products</h2>
-          <span>{totalProuductCount} Products</span>
+          <span>{totalProductCount} Products</span>
         </div>
 
         <div className="app-header__select">

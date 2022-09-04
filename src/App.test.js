@@ -21,7 +21,7 @@ jest.mock(
 
 jest.mock("./components/pagination/Pagination", () => jest.fn());
 
-jest.mock("./components/productsList/ProuctsList", () => jest.fn());
+jest.mock("./components/productsList/ProductsList", () => jest.fn());
 
 const dispatchSpy = jest.fn();
 

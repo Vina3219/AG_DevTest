@@ -20,7 +20,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm test:coverage`
 
 Launches the test runner to run all tests and generate the coverage report.
-The covergae report is available at `coverage/lcov-report/index.html`.
+The coverage report is available at `coverage/lcov-report/index.html`.
 
 ### `npm run build`
 

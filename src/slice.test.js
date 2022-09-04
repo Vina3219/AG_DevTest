@@ -123,7 +123,7 @@ describe("actions", () => {
       newState = reducer(initialState, loadPage());
     });
 
-    it("loads products for the curent page", () => {
+    it("loads products for the current page", () => {
       expect(newState).toEqual({
         products: [{ id: 1 }],
         pageNum: 1,

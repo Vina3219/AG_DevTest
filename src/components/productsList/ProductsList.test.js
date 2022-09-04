@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { render } from "@testing-library/react";
-import ProductsList from "./ProuctsList";
+import ProductsList from "./ProductsList";
 import { selectProducts, selectProductsCountPerPage } from "../../slice";
 
 jest.mock("react-redux", () => ({
