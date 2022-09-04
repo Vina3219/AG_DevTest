@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Axe Group Code Challenge
 
 ## Available Scripts
 
@@ -19,6 +17,11 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm test:coverage`
+
+Launches the test runner to run all tests and generate the coverage report.
+The covergae report is available at `coverage/lcov-report/index.html`.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -27,44 +30,73 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Design
 
-### `npm run eject`
+### Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The application uses Redux for state management. It uses the hooks `useDispatch` and `useSelector` to integrate Redux in the components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Reducers, actions and selectors are being used and the trunk is not. The consideration is based on the API calls are immediate responding and won't block the reducer.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### UI Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The UI is separated into multiple components:
 
-## Learn More
+- App: The basic layout and parent component for all others, and contains a header with titles.
+- ProductsCountPerPageSelect: A component presents the products per page select and handles the change selected products number per page event.
+- ProductsList: A component wraps the products to display on the page. the layout would change based on different products displaying per page, current page and view port size.
+- Product: A component displays a single product. The product tiles and descriptions are truncated if they are more than 2 lines to keep a decent layout.
+- Pagination: A component shows the pagination on page and handles page changes events. The function of the component includes jump to the adjust pages.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The current solution is using vanilla CSS as the application is relative simple. Using the CSS pre-processors or CSS-in-JS solutions may be a bit overkill IMO.
 
-### Code Splitting
+### API Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+As the calls of the API endpoints are actually mocked, there is no need to consider the async scenarios. The `services.js` file is designed to simulate API calls and returns the response in a sync way.
 
-### Analyzing the Bundle Size
+### Responsive Handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+A simple solution has been implemented that
 
-### Making a Progressive Web App
+1. when the width of the view port is less than or equal to 900px (most of the pad's screen width breakpoint), the products list will have 2 columns at most;
+2. when the width of the view port is less than or equal to 450px (most of the mobile's screen width breakpoint), the products list will have 1 column at most;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Unit Test
 
-### Advanced Configuration
+- The application uses `Jest` and `react-testing-library` for unit testing. Snapshot matchings are widely used to detect any unexpected changes during further refactors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Further Improvements
 
-### Deployment
+### Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Optional authentication requirement was listed. To implement an authentication flow, the application should have a login page and a token generating/check mechanism.
 
-### `npm run build` fails to minify
+### Redux trunks and Sagas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As mentioned before the application does not use trunks at this moment, however the trunks are good at splitting the high cost behaviours from reducers. [Redux Sagas](https://redux-saga.js.org/) are welcomed here too.
+
+### CSS Pre-processors
+
+Consider to use Sass/Less to make css files more compact and readable.
+
+### CSS-in-JS
+
+Alternatively, the CSS-in-JS solutions (e.g. [Styled Components](https://styled-components.com/) and [Legacy MUI makeStyles](https://mui.com/system/styles/basics/)) are popular nowadays to make style calculations easier.
+
+### Storybook
+
+The [Storybook](https://storybook.js.org/) is a powerful tool for testing, debugging and sharing applications and libraries.
+
+### Pagination Improvements
+
+The behaviours of paginating could be improved to add additional buttons for browsing to the first/last pages.
+
+### Tooltips
+
+Additional tooltips could be used associated with the truncated product titles and descriptions to provide completed information for users.
+
+### Accessibility
+
+Color contrast in the whole page and better `aria-label`s could be implemented to the buttons and the select.
