@@ -20,3 +20,22 @@
 .productsList__container--4columns {
   grid-template-columns: 24% 24% 24% 24%;
 }
+
+@media only screen and (max-width: 900px) {
+  .productsList__container {
+    grid-template-columns: 49% 49%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .productsList__container {
+    grid-template-columns: 98%;
+  }
+
+  .app-footer {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 14px;
+    justify-content: center;
+  }
+}

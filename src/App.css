@@ -39,7 +39,7 @@
 
 .app hr {
   margin: 0;
-  color: #bebebe;
+  border-top: 1px solid #bebebe;
   margin-inline-start: 10px;
   margin-inline-end: 10px;
 }
@@ -52,23 +52,4 @@
   align-items: baseline;
   padding: 8px;
   padding-right: 48px;
-}
-
-@media only screen and (max-width: 900px) {
-  .productsList__container {
-    grid-template-columns: 49% 49%;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .productsList__container {
-    grid-template-columns: 98%;
-  }
-
-  .app-footer {
-    padding-right: 0;
-    padding-left: 0;
-    font-size: 14px;
-    justify-content: center;
-  }
 }
