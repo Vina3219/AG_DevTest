@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductsList matches snapshot 1`] = `
+<DocumentFragment>
+  <ol
+    class="productsList__container productsList__container--4columns"
+  >
+    <li />
+  </ol>
+</DocumentFragment>
+`;

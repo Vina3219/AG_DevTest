@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductsCountPerPageSelect matches snapshot 1`] = `
+<DocumentFragment>
+  <select
+    class="productsCountPerPageSelect"
+    data-testid="products-count-per-page-select"
+  >
+    <option
+      value="4"
+    >
+      4 per page
+    </option>
+    <option
+      value="6"
+    >
+      6 per page
+    </option>
+    <option
+      value="8"
+    >
+      8 per page
+    </option>
+  </select>
+</DocumentFragment>
+`;

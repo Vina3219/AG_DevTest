@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination if there are only two pages matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    1
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    2
+  </button>
+  <button
+    class="pagination--button"
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pagination if there are only two pages when the current page number is 2 matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    1
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    2
+  </button>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pagination matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    1
+  </button>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pagination when there are 3 pages matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    1
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    2
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    3
+  </button>
+  <button
+    class="pagination--button"
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pagination when there are 3 pages when current page is 2 matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    1
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    2
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    3
+  </button>
+  <button
+    class="pagination--button"
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Pagination when there are 3 pages when current page is 3 matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="pagination--button"
+  >
+    &lt; Previous page
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    1
+  </button>
+  <button
+    class="pageNum--button"
+  >
+    2
+  </button>
+  <button
+    class="pageNum--button"
+    disabled=""
+  >
+    3
+  </button>
+  <button
+    class="pagination--button"
+    disabled=""
+  >
+    Next page &gt;
+  </button>
+</DocumentFragment>
+`;
