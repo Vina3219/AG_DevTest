@@ -1,0 +1,21 @@
+.pageNum--button {
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+}
+
+.pageNum--button:disabled {
+  background-color: white;
+  color: black;
+  font-style: bold;
+  border-bottom: 4px solid #202020;
+  text-align: center;
+}
+
+.pagination--button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
